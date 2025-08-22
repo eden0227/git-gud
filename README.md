@@ -208,7 +208,7 @@ git push --force <remote-repo> <local-branch>
 ### Tags and Versioning
 
 -   Labelling specific commit with a tag, usually indicates the release version.
--   [Semantic Versioning](https://semver.org/) can be used as a format for the tag message.
+-   [Semantic Versioning](https://semver.org/) can be used as a format for the tag name.
 -   Format: `MAJOR.MINOR.PATCH`
 -   Example: `0.1.0`, `0.2.0`, `0.2.1`, `1.0.0`
 
@@ -272,7 +272,7 @@ Branching strategies define how developers organise work in branches to manage f
 
 ## Changelog
 
-### [v0.1.0] - 2025-08-21
+### [v0.1.0] - 2025-08-23
 
 -   Initialise Git repository
 -   Add MIT license ([LICENSE](LICENSE))
