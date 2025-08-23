@@ -272,6 +272,12 @@ Branching strategies define how developers organise work in branches to manage f
 
 ## Changelog
 
+### [v1.0.0] - 2025-08-23
+
+-   Add basic structure
+-   Add style on text
+-   Center a div
+
 ### [v0.2.1] - 2025-08-23
 
 -   Fix spelling on title (index.html)
