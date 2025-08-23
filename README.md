@@ -77,6 +77,41 @@ This project was created to demonstrate Git version control using an example pro
 > [!IMPORTANT]
 > This section assumes a basic familiarity with using the terminal and navigating the GitHub interface.
 
+### Creating Configuration
+
+View system, global and local configurations:
+
+```
+git config --list
+```
+
+Remove all credential helpers:
+
+```
+git config --global --unset-all credential.helper
+git config --local --unset-all credential.helper
+```
+
+Set only manager:
+
+```
+git config --global credential.helper manager
+```
+
+Set name and email globally:
+
+```
+git config --global user.name "username"
+git config --global user.email "username@email.com"
+```
+
+Alternatively for local repository:
+
+```
+git config user.name "username"
+git config user.email "username@email.com"
+```
+
 ### Creating a Repository
 
 Remote → Local:
@@ -139,6 +174,12 @@ Undo last commit but keep changes staged:
 git reset --soft HEAD~1
 ```
 
+Commit without any changes locally:
+
+```
+git commit --allow-empty -m "<message>"
+```
+
 Push commits to remote repository:
 
 ```
@@ -164,11 +205,11 @@ git push -u <remote-repo> <local-branch>
 
 ### Updating Local Repository
 
-Updating remote tracker and merging local branch:
+Update remote tracker and merge local branch:
 
 ```
 git fetch <remote-repo>
-git merge <remote-repo/remote-branch> <local-branch>
+git merge <remote-repo/remote-branch>
 ```
 
 Alternatively:
@@ -189,7 +230,7 @@ git push <remote-repo> --delete <remote-branch>
 
 ### Undoing Commits History
 
-Creates a new commit that undoes the commits after a specified commit:
+Create a new commit that undoes the commits after a specified commit:
 
 ```
 git revert <hash-commit>
@@ -207,13 +248,19 @@ git push --force <remote-repo> <local-branch>
 
 ### Tags and Versioning
 
--   Labelling specific commit with a tag, usually indicates the release version.
+-   Label specific commit with a tag before pushing to remote main branch, usually indicates the release version.
 -   [Semantic Versioning](https://semver.org/) can be used as a format for the tag name.
 -   Format: `MAJOR.MINOR.PATCH`
 -   Example: `0.1.0`, `0.2.0`, `0.2.1`, `1.0.0`
 
 ```
 git tag -a <version> -m "<message>"
+```
+
+View tags with messages:
+
+```
+git tag -n
 ```
 
 ### Command Workflow Diagram
@@ -271,6 +318,12 @@ Branching strategies define how developers organise work in branches to manage f
 ---
 
 ## Changelog
+
+### [v1.0.0] - 2025-08-23
+
+-   Add basic structure
+-   Add style on text
+-   Center a div
 
 ### [v0.2.1] - 2025-08-23
 
