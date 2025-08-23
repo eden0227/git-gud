@@ -272,6 +272,10 @@ Branching strategies define how developers organise work in branches to manage f
 
 ## Changelog
 
+### [v0.2.0] - 2025-08-23
+
+-   Set up example project
+
 ### [v0.1.0] - 2025-08-23
 
 -   Initialise Git repository
