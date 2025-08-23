@@ -139,6 +139,12 @@ Undo last commit but keep changes staged:
 git reset --soft HEAD~1
 ```
 
+Commit without any changes locally:
+
+```
+git commit --allow-empty -m "<message>"
+```
+
 Push commits to remote repository:
 
 ```
@@ -164,11 +170,11 @@ git push -u <remote-repo> <local-branch>
 
 ### Updating Local Repository
 
-Updating remote tracker and merging local branch:
+Update remote tracker and merge local branch:
 
 ```
 git fetch <remote-repo>
-git merge <remote-repo/remote-branch> <local-branch>
+git merge <remote-repo/remote-branch>
 ```
 
 Alternatively:
@@ -207,13 +213,19 @@ git push --force <remote-repo> <local-branch>
 
 ### Tags and Versioning
 
--   Labelling specific commit with a tag, usually indicates the release version.
+-   Label specific commit with a tag before pushing to remote main branch, usually indicates the release version.
 -   [Semantic Versioning](https://semver.org/) can be used as a format for the tag name.
 -   Format: `MAJOR.MINOR.PATCH`
 -   Example: `0.1.0`, `0.2.0`, `0.2.1`, `1.0.0`
 
 ```
 git tag -a <version> -m "<message>"
+```
+
+View tags with messages:
+
+```
+git tag -n
 ```
 
 ### Command Workflow Diagram
@@ -271,6 +283,12 @@ Branching strategies define how developers organise work in branches to manage f
 ---
 
 ## Changelog
+
+### [v1.0.0] - 2025-08-23
+
+-   Add basic structure
+-   Add style on text
+-   Center a div
 
 ### [v0.2.1] - 2025-08-23
 
