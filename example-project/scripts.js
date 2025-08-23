@@ -1,2 +1,4 @@
-let hello = document.body.textContent;
-alert(hello)
+document.addEventListener("DOMContentLoaded", () => {
+    let hello = document.body.textContent;
+    alert(hello);
+});
